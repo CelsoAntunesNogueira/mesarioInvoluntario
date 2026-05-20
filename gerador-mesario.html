@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Voluntário Mesário</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">IFF</div>
+        <div><div>Gerador de Mesário</div></div>
+      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema">🌙</button>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <article class="hero-card">
+        <!-- <div class="eyebrow">Cadastro simbólico de voluntário</div> -->
+        <h1>Gere um perfil de voluntário para atuar como mesário.</h1>
+        <p>Gere dados para inscrever algum otário para perder o domingo nas eleições.</p>
+        <div class="actions">
+          <button class="btn btn-primary" id="gerarBtn" type="button">Gerar voluntário</button>
+          <button class="btn btn-secondary" id="copiarBtn" type="button">Copiar dados</button>
+        </div>
+      </article>
+      <aside class="hero-card" style="padding:0; overflow:hidden;">
+        <div class="stats">
+          <div class="stat-box"><strong>Mesário</strong><span>Perfil automático para demonstração</span></div>
+          <div class="stat-box"><strong>CPF</strong><span>Gerado com dígitos verificadores</span></div>
+          <div class="stat-box"><strong>18 a 80 anos</strong><span>Faixa usada na data aleatória</span></div>
+          <div class="stat-box"><strong>Vídeo</strong><span>Espaço reservado para orientação</span></div>
+        </div>
+      </aside>
+    </section>
+    <section class="section grid">
+      <article class="panel">
+        <h2 class="section-title">Dados do voluntário</h2>
+        <p class="section-subtitle">Clique em gerar para montar um cadastro visual de mesário voluntário.</p>
+        <div class="result-card">
+          <div class="field"><span>Nome completo</span><strong id="nome">Carregando...</strong></div>
+          <div class="field"><span>Data de nascimento</span><strong id="nascimento">--/--/----</strong></div>
+          <div class="field"><span>CPF</span><strong id="cpf">000.000.000-00</strong></div>
+          <div class="field"><span>Zona e seção</span><strong id="zonaSecao">Zona 000 · Seção 0000</strong></div>
+          <div class="field"><span>Município</span><strong id="municipio">Maricá - RJ</strong></div>
+        </div>
+        <div class="tag"> Mesário cadastrado com sucesso!</div>
+      </article>
+      <aside class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/zuug5tSpmH0"
+            title="Vídeo de orientação para mesário"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-copy">
+          <h2 class="section-title">Benefícios</h2>
+          <p class="section-subtitle">Atuar como mesário(a) garante vantagens trabalhistas, acadêmicas e financeiras asseguradas pela legislação brasileira.</p>
+          <div class="mini-list">
+            <div class="mini-item"><strong>Vantagem em concursos públicos:</strong> Utilização da função como critério de desempate em vagas públicas.</div>
+            <div class="mini-item"><strong>Meia-entrada cultural:</strong> Desconto de 50% em cinemas, teatros e eventos em estados que possuem leis regionais de incentivo.</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <!-- <p class="footer">Protótipo em HTML e JavaScript inspirado na lógica do seu gerador PHP, adaptado para funcionar direto no navegador.</p> -->
+  </main>
+ <script src="script.js"></script>
+</body>
+</html>
