@@ -119,4 +119,10 @@
       .btn { width: 100%; }
       h1 { font-size: clamp(1.6rem, 7vw, 2.1rem); }
     }
-  
+  .btn-success {
+  background: var(--color-success);
+  color: #fff;
+}
+.btn-success:hover {
+  background: #245224;
+}
