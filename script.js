@@ -91,4 +91,33 @@
     gerarBtn.addEventListener('click', gerarVoluntario);
     copiarBtn.addEventListener('click', copiarDados);
     gerarVoluntario();
- 
+ // Adicionar esse botão no HTML junto com os outros
+// <button class="btn btn-success" id="salvarBtn" type="button">Salvar no banco</button>
+
+document.getElementById('salvarBtn').addEventListener('click', async () => {
+    const dados = {
+        nome:       document.getElementById('nome').textContent,
+        cpf:        document.getElementById('cpf').textContent,
+        nascimento: document.getElementById('nascimento').textContent, // DD/MM/YYYY
+        zona:       document.getElementById('zonaSecao').textContent,
+        municipio:  document.getElementById('municipio').textContent
+    };
+
+    try {
+        const resposta = await fetch('salvar.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(dados)
+        });
+
+        const json = await resposta.json();
+
+        if (json.sucesso) {
+            alert('Voluntário salvo com sucesso!');
+        } else {
+            alert('Erro: ' + json.mensagem);
+        }
+    } catch (e) {
+        alert('Falha na requisição: ' + e.message);
+    }
+});
