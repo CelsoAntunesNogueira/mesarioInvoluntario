@@ -1,8 +1,8 @@
 <?php
-$host   = 'localhost';
-$db     = 'gerador_mesario';
-$user   = 'root';         // troque por um usuário dedicado em produção
-$senha  = '';
+$host   = 'sql102.infinityfree.com';
+$db     = 'if0_42108659_mesario';
+$user   = 'if0_42108659';         // troque por um usuário dedicado em produção
+$senha  = 'Manteiga21';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
